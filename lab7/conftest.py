@@ -23,5 +23,4 @@ def client(server):
     command = 'iperf3 -c ' + server_ip + ' -t 10 -i 1'
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err = process.communicate()
-    print(out, err)
     return out, err

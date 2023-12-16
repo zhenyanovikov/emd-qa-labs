@@ -6,6 +6,5 @@ class TestSuite:
         out, err = client
         assert err == b''
         parsed = parser.parse(out)
-        print(parsed)
         assert float(parsed['Bitrate']) > 0
         assert float(parsed['Bitrate']) < 1000000000
